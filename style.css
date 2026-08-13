@@ -1,0 +1,138 @@
+/* .color1 { #1a2b2b };
+.color2 { #332222 };
+.color3 { #4d1a1a };
+.color4 { #661111 };
+.color5 { #800909 }; */
+body{
+    background-color: #0D0D0D;
+    color: #F5F5F5;
+    margin: 0;
+}
+.cabecalho{
+    display: flex;
+    justify-content: space-evenly; 
+    align-items: center;
+    background-color: #181818 ;
+    border: #D62828 2px solid;
+    border-radius: 50px;
+    height: 70px;
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    right: 10px;
+
+}
+.logo{
+    text-align: center;
+    margin: 0;
+    font-size: 40px;
+}
+.cabecalho img{
+    height: 70px;
+    width: 70px;
+    vertical-align: middle;
+}
+.navbar a{
+    padding: 10px 20px;
+    border-radius: 50px;
+    text-decoration: none;
+    border: #D62828 solid 1px;
+    color: #F5F5F5;
+    transition: border 1s;
+}
+.navbar a:hover{
+    border: #2563EB solid 1px;
+}
+.navbar ul{
+    list-style-type: none;
+    display: flex;
+    justify-content: space-evenly;
+    gap: 10px ;
+}
+.banner{
+    background-image: url(./src/bannerBarbeariaInicialMenor.jpg);
+    height: 720px;
+    background-size:cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.banner h2{
+    font-size: 50px;
+    margin: 0;
+}
+.banner p{
+    font-size: 30px;
+    margin: 10px 0;
+}
+.banner .btn-agendar{
+    padding: 10px 20px;
+    font-size: 30px;
+    border-radius: 50px;
+    text-decoration: none;
+    border: #ffffff solid 2px;
+    color: #F5F5F5;
+    transition: background-color 1s;
+    background-color: #D62828;
+}
+.banner .btn-agendar:hover{
+    background-color: #2563EB;
+}
+.tituloservicos{
+    text-align: center;
+    font-size: 40px;
+    background-color: #181818;
+    margin: 30px 0 0 0;
+    
+}
+.servicos{
+    display: flex;
+    justify-content: space-evenly;
+    background-color: #181818;
+    padding: 20px;
+
+}
+.servicos div{
+    border: #D62828 solid 2px  ;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    padding: 20px;
+    width: 300px;
+    height: 300px;
+    border-radius: 20px;
+    transition: border 1s;
+}
+.servicos div h3{
+    font-size: 30px;
+    margin: 0;
+}
+.servicos div p{
+    font-size: 20px;
+    text-align: center;
+}
+.servicos div:hover{
+    border: #2563EB solid 2px;
+}
+.titulogaleria{
+    text-align: center;
+    font-size: 40px;
+    background-color: #181818;
+    margin: 30px 0 0 0;
+    
+}
+.containerGaleria{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    background-color: #181818;
+    gap: 20px;
+}
+.containerGaleria img{
+    width: 400px;
+    height: 400px;
+}
