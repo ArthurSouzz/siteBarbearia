@@ -1,0 +1,254 @@
+<!doctype html>
+<!-- Estou usando HTML5 para criar a página -->
+
+<html lang="pt-BR">
+  <!-- Como o site está em português, coloquei pt-BR -->
+
+  <head>
+    <meta charset="UTF-8" />
+    <!-- Permite usar acentos normalmente -->
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- Faz a página se adaptar melhor em diferentes telas -->
+
+    <title>Agendamento - Barbearia do Fulano</title>
+    <!-- Nome que aparece na aba do navegador -->
+
+    <link rel="stylesheet" href="style.css" />
+    <!-- Aqui estou usando o mesmo CSS do site principal -->
+  </head>
+
+  <body>
+    <!-- Começo do conteúdo que aparece na página -->
+
+    <header>
+      <!-- Cabeçalho da página -->
+
+      <div class="cabecalho">
+        <!-- Aqui ficam o logo e o menu -->
+
+        <h1 class="logo">
+          <!-- Nome e logo da barbearia -->
+
+          <img src="./src/logoBarbeariaAtulizada.png" alt="Logo da Barbearia" />
+          <!-- Imagem do logo -->
+
+          Barbearia do Fulano
+          <!-- Nome da barbearia -->
+        </h1>
+
+        <nav class="navbar">
+          <!-- Aqui começa o menu de navegação -->
+
+          <ul class="menu">
+            <!-- lista não enumerada de itens no menu com uma classe -->
+            <li><a href="index.html">Início</a></li>
+            <li><a href="agendamento.html">Agendamentos</a></li>
+            <li><a href="#">Clientes</a></li>
+            <li><a href="#">Serviços</a></li>
+            <li><a href="#">Contato</a></li>
+            <!-- linhas da linta com os links do menu de navegação -->
+          </ul>
+          <!-- fim da lista -->
+        </nav>
+      </div>
+    </header>
+
+    <main>
+      <!-- Aqui começa a parte principal da página -->
+
+      <section class="pagina-agendamento">
+        <!--
+          Essa seção contém toda a parte
+          de agendamento.
+        -->
+
+        <h2>Agende seu horário</h2>
+        <!-- Título principal da página -->
+
+        <p>Preencha os dados abaixo para realizar seu agendamento.</p>
+        <!-- Explicação para o cliente -->
+
+        <form class="formulario-agendamento">
+          <!--
+            Aqui começa o formulário.
+            É onde o cliente vai colocar
+            as informações do agendamento.
+          -->
+
+          <div class="campo">
+            <!-- Campo para o nome -->
+
+            <label for="nome">Nome completo</label>
+            <!-- Nome que aparece acima da caixa -->
+
+            <input
+              type="text"
+              id="nome"
+              name="nome"
+              placeholder="Digite seu nome completo"
+              required
+            />
+            <!--
+              Campo para digitar o nome.
+
+              type="text" = campo de texto
+              id = identifica o campo
+              placeholder = mostra uma dica
+              required = obriga o preenchimento
+            -->
+          </div>
+
+          <div class="campo">
+            <!-- Campo para o telefone -->
+
+            <label for="telefone">Telefone</label>
+
+            <input
+              type="tel"
+              id="telefone"
+              name="telefone"
+              placeholder="(00) 00000-0000"
+              required
+            />
+            <!-- Campo onde o cliente coloca o telefone -->
+          </div>
+
+          <div class="campo">
+            <!-- Campo para escolher o serviço -->
+
+            <label for="servico">Escolha o serviço</label>
+
+            <select id="servico" name="servico" required>
+              <!-- Lista com os serviços disponíveis -->
+
+              <option value="">Selecione um serviço</option>
+
+              <option value="corte">Corte de Cabelo</option>
+
+              <option value="barba">Barba</option>
+
+              <option value="completo">Corte + Barba</option>
+
+              <option value="tratamento">Tratamento Capilar</option>
+            </select>
+          </div>
+
+          <div class="campo">
+            <!-- Campo para escolher o barbeiro -->
+
+            <label for="barbeiro">Escolha o barbeiro</label>
+
+            <select id="barbeiro" name="barbeiro" required>
+              <!-- Lista com os barbeiros -->
+
+              <option value="">Selecione o barbeiro</option>
+
+              <option value="gabriel">Gabriel Almeida</option>
+            </select>
+          </div>
+
+          <div class="linha">
+            <!--
+              Coloquei a data e o horário juntos
+              para ficarem lado a lado.
+            -->
+
+            <div class="campo">
+              <!-- Campo para escolher a data -->
+
+              <label for="data">Data</label>
+
+              <input type="date" id="data" name="data" required />
+              <!-- Aqui o cliente escolhe o dia -->
+            </div>
+
+            <div class="campo">
+              <!-- Campo para escolher o horário -->
+
+              <label for="horario">Horário</label>
+
+              <input type="time" id="horario" name="horario" required />
+              <!-- Aqui o cliente escolhe o horário -->
+            </div>
+          </div>
+
+          <div class="campo">
+            <!-- Campo para observações -->
+
+            <label for="observacoes">Observações</label>
+
+            <textarea
+              id="observacoes"
+              name="observacoes"
+              rows="5"
+              placeholder="Digite alguma observação sobre seu atendimento..."
+            ></textarea>
+            <!--
+              Usei textarea porque aqui o cliente
+              pode escrever uma mensagem maior.
+            -->
+          </div>
+
+          <button type="submit" class="btn-confirmar">
+            Confirmar Agendamento
+          </button>
+          <!--
+            Botão usado para enviar o formulário.
+          -->
+
+          <a href="index.html" class="btn-voltar">
+            Voltar para a página inicial
+          </a>
+          <!--
+            Esse botão leva o usuário de volta
+            para o index.html.
+          -->
+        </form>
+        <!-- Fim do formulário -->
+      </section>
+      <!-- Fim da seção de agendamento -->
+    </main>
+    <!-- Fim do conteúdo principal -->
+
+    <footer>
+      <!-- Começo do rodapé -->
+
+      <section class="principalfooter">
+        <div>
+          <!-- Parte dos contatos -->
+
+          <h3>Contato:</h3>
+
+          <ul>
+            <li>
+              <a href="#">Whatsapp</a>
+            </li>
+
+            <li>
+              <a href="#">Instagram</a>
+            </li>
+
+            <li>
+              <a href="#">Facebook</a>
+            </li>
+          </ul>
+        </div>
+
+        <div>
+          <!-- Logo no rodapé -->
+
+          <img src="./src/logoBarbeariaAtulizada.png" alt="Logo da Barbearia" />
+        </div>
+
+        <div>
+          <!-- Direitos do site -->
+
+          <p>&copy; 2025 Barbearia do Fulano. Todos os direitos reservados.</p>
+        </div>
+      </section>
+    </footer>
+    <!-- Fim do rodapé -->
+  </body>
+</html>
+<!-- Fim da página -->

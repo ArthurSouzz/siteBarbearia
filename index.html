@@ -1,45 +1,46 @@
-<!doctype html>
-<!-- html -->
-<html lang="pt-BR">
-  <head>
+<!doctype html><!-- informa ao navegador a versão do HTML -->
+ <html lang="pt-BR"> <!-- linguagem = português -->
+  <head> <!-- tag para metadados -->
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Barbearia do Fulano</title>
-    <link rel="stylesheet" href="style.css" />
-  </head>
+    <title>Barbearia do Fulano</title> <!-- título da página, que aparece na aba do navegador -->
+    <link rel="stylesheet" href="style.css" /> <!-- link para o arquivo do css "style.css" -->
+  </head><!-- fim do head -->
 
-  <body>
-    <header>
-      <div class="cabecalho">
-        <h1 class="logo">
-          <img src="./src/logobarbearia.png" alt="" /> Barbearia do Fulano
+  <body> <!-- tag para todo o corpo do documento, contem todo o conteúdo da página -->
+    <header> <!-- tag para o conteudo introdutório da página, o cabeçalho -->
+      <div class="cabecalho"> <!-- um container com uma classe para estilização do cabeçalho -->
+        <h1 class="logo"><!-- titulo da pagina, que aparece no cabeçalho -->
+          <img src="./src/logoBarbeariaAtulizada.png" alt="" /> Barbearia do Fulano <!-- imagem de logo ao lado do título -->
         </h1>
-        <nav class="navbar">
-          <ul class="menu">
-            <li><a href="#">Início</a></li>
-            <li><a href="#">Agendamentos</a></li>
+        <nav class="navbar"> <!-- tag para o menu de navegação, com uma classe para estilização -->
+          <ul class="menu"><!-- lista não enumerada de itens no menu com uma classe -->
+            <li><a href="index.html">Início</a></li>
+            <li><a href="agendamentos.html">Agendamentos</a></li>
             <li><a href="#">Clientes</a></li>
             <li><a href="#">Serviços</a></li>
-            <li><a href="#">Contato</a></li>
-          </ul>
-        </nav>
+            <li><a href="#">Contato</a></li><!-- linhas da linta com os links do menu de navegação -->
+          </ul><!-- fim da lista -->
+        </nav><!-- fim do menu de navegação -->
       </div>
-      <section class="banner">
-        <h2 class="slogan">Corte de cabelo e barba com estilo</h2>
-        <p class="descricao">Agende seu horário e venha se sentir renovado!</p>
-        <a href="#" class="btn-agendar">Agendar Agora</a>
-      </section>
-    </header>
-    <main>
-      <h2 class="tituloservicos">Serviços</h2>
-      <section class="servicos">
-        <div>
-          <h3>Corte de Cabelo</h3>
-          <p>Descrição do serviço de corte de cabelo.</p>
+      <section class="banner"> <!-- tag para seção do banner -->
+        <h2 class="slogan">Corte de cabelo e barba com estilo</h2> <!-- título do banner, h2 para hierarquia -->
+        <p class="descricao">Agende seu horário e venha se sentir renovado!</p><!-- descrição do banner com uma tag para paragrafo -->
+        <a href="agendamentos.html" class="btn-agendar">Agendar Agora</a><!-- link para agendar horário -->
+      </section><!-- fim da seção do banner -->
+    </header><!-- fim do cabeçalho -->
+    <main><!-- tag para conteúdo principal da página -->
+      <h2 class="tituloservicos">Serviços</h2> <!-- título da seção de serviços -->
+      <section class="servicos"> <!-- seção de serviços -->
+        <div class="servico-corte" onclick="mostrarOpcoesCorte()"> <!-- ao clicar nesse card, os cortes disponíveis aparecem -->
+          <h3>Corte de Cabelo</h3><!-- título do serviço -->
+          <p>Descrição do serviço de corte de cabelo.</p> <!-- paragrafo descrição -->
+          <span class="ver-opcoes">Clique para ver os cortes</span>
         </div>
-        <div>
+        <div class="servico-barba" onclick="mostrarOpcoesBarba()"> <!-- ao clicar nesse card, as opções de barba aparecem -->
           <h3>Barba</h3>
           <p>Descrição do serviço de barba.</p>
+          <span class="ver-opcoes">Clique para ver as opções</span>
         </div>
         <div>
           <h3>Completo</h3>
@@ -50,11 +51,67 @@
           <p>Descrição do serviço de tratamento capilar.</p>
         </div>
       </section>
-      <h2 class="titulogaleria">Galeria de Imagens</h2>
-      <section class="galeria">
-        <div class="containerGaleria">
-          <div class="imagemgaleria">
-            <img src="./src/galeria1.jpg" alt="Imagem 1" />
+
+      <!-- seção que começa escondida e aparece quando o usuário clica em Corte de Cabelo -->
+      <section class="opcoes-corte" id="opcoesCorte">
+        <h2>Nossos Cortes</h2>
+        <div class="lista-cortes">
+          <div class="opcao-corte">
+            <img src="./src/corte_degrade.png" alt="Corte degradê" />
+            <h3>Degradê</h3>
+            <p>Corte moderno com acabamento impecável.</p>
+          </div>
+
+          <div class="opcao-corte">
+            <img src="./src/corte_social.png" alt="Corte social" />
+            <h3>Social</h3>
+            <p>Elegância para qualquer ocasião.</p>
+          </div>
+
+          <div class="opcao-corte">
+            <img src="./src/corte_americano.png" alt="Corte americano" />
+            <h3>Americano</h3>
+            <p>Estilo atual e muito procurado.</p>
+          </div>
+        </div>
+      </section>
+
+      <!-- seção que começa escondida e aparece quando o usuário clica em Barba -->
+      <section class="opcoes-barba" id="opcoesBarba">
+        <h2>Opções de Barba</h2>
+        <div class="lista-barbas">
+          <div class="opcao-barba">
+            <img
+              src="https://images.unsplash.com/photo-1494873446894-adbfecfc407a?auto=format&fit=crop&w=700&q=80"
+              alt="Exemplo de barba tradicional sendo aparada"
+            />
+            <h3>Barba Tradicional</h3>
+            <p>Aparar e alinhar a barba, deixando o visual limpo e bem cuidado.</p>
+          </div>
+          <div class="opcao-barba">
+            <img
+              src="https://images.unsplash.com/photo-1475669913832-fd187510b578?auto=format&fit=crop&w=700&q=80"
+              alt="Exemplo de barba desenhada"
+            />
+            <h3>Barba Desenhada</h3>
+            <p>Acabamento com linhas marcadas e formato personalizado para o rosto.</p>
+          </div>
+          <div class="opcao-barba">
+            <img
+              src="https://images.unsplash.com/photo-1747352570145-75dec25ea0fb?auto=format&fit=crop&w=700&q=80"
+              alt="Exemplo de cuidado e acabamento de barba"
+            />
+            <h3>Barboterapia</h3>
+            <p>Cuidado completo da barba com preparação da pele e acabamento detalhado.</p>
+          </div>
+        </div>
+      </section>
+
+      <h2 class="titulogaleria">Galeria de Imagens</h2><!-- título da seção da galeria -->
+      <section class="galeria"><!-- seção da galeria -->
+        <div class="containerGaleria"> <!-- container para as imagens da galeria -->
+          <div class="imagemgaleria"><!-- container para cada imagem da galeria -->
+            <img src="./src/galeria1.jpg" alt="Imagem 1" /><!-- imagem da galeria -->
           </div>
           <div class="imagemgaleria">
             <img src="./src/galeria2.jpeg" alt="Imagem 2" />
@@ -73,23 +130,83 @@
           </div>
         </div>
       </section>
-      <h2 class="tituloapresentacao">Apresentação da Barbearia</h2>
-      <section class="apresentacao">
-        <div class="apresentabarbearia">
-          <h3>Barberia</h3>
-          <figure>
-            <img class="imgapresenta" src="./src/ambiente3x4.jpg" alt="">
-            <figcaption>Descrição da barbearia</figcaption>
-          </figure>
+      <h2 class="tituloapresentacao">Apresentação da Barbearia</h2><!-- título da seção de apresentação -->
+      <section class="apresentacao"><!-- seção de apresentação -->
+        <div class="apresentabarbearia"> <!-- container para a apresentação da barbearia -->
+          <h3>Barberia</h3> <!-- título do barbeiro -->
+          <figure class="figuraapresenta"><!-- tag para uma figure, uma imagem com uma legenda  -->
+            <img class="imgapresenta" src="./src/ambiente3x4.jpg" alt="" /> <!-- imagem da barbearia -->
+            <figcaption> <!-- legenda da imagem figure -->
+              <p>Barbearia Imperial</p> <!-- paragrafos -->
+              <p>Estilo, precisão e atitude em cada corte.</p>
+              <p>
+                Na Barbearia Imperial, tradição e modernidade se encontram para
+                criar o visual perfeito para você. Cortes modernos, barba
+                impecável e atendimento de qualidade em um ambiente confortável
+                e descontraído.
+              </p>
+              <p>Seu estilo. Sua identidade. Nosso trabalho.</p>
+            </figcaption><!-- fim da legenda -->
+          </figure><!-- fim da figure -->
         </div>
-        <div class="apresentabarbeiro">
-          <h3>Barbeiro</h3>
-          <figure>
-            <img class="imgapresenta" src="./src/oCaba3x4.jpeg" alt="">
-            <figcaption>Descrição do barbeiro</figcaption>
+        <div class="apresentabarbeiro"> <!-- container para a apresentação do barbeiro -->
+          <h3>Barbeiro</h3> <!-- título do barbeiro -->
+          <figure class="figuraapresenta"><!-- tag para uma figure, uma imagem com uma legenda  -->
+            <img class="imgapresenta" src="./src/oCaba3x4.jpeg" alt="" /> <!-- imagem do barbeiro -->
+            <figcaption><!-- legenda da imagem figure -->
+              <p>Gabriel Almeida</p><!--paragrafos  -->
+              <p>Barbeiro profissional | Especialista em estilo masculino</p>
+              <p>
+                Com mais de 8 anos de experiência, Gabriel transforma cada corte
+                em uma experiência personalizada, cuidando de cada detalhe para
+                entregar um visual que combine com você.
+              </p>
+            </figcaption>
           </figure>
         </div>
       </section>
-    </main>
-  </body>
-</html>
+    </main><!-- fim do conteúdo principal -->
+    <footer> <!-- tag para o rodapé do site -->
+      <section class="principalfooter"> <!-- seção para o conteúdo principal do rodapé -->
+        <div> <!-- container para os contatos -->
+          <h3>contato:</h3> <!-- título para os contatos -->
+          <ul> <!-- lista não ordenada para os contatos -->
+            <li><a href="#">Whatsapp</a></li><!-- linhas da lista com links -->
+            <li><a href="#">Instagram</a></li>
+            <li><a href="#">Facebook</a></li>
+          </ul>
+        </div>
+        <div><!-- container para a logo da Barbearia -->
+          <img src="./src/logoBarbeariaAtulizada.png" alt="Logo da Barbearia" /><!-- imagem da logo -->
+        </div>
+        <div><!-- container para os direitos reservados -->
+          <p>&copy; 2026 Barbearia do Fulano. Todos os direitos reservados.</p><!-- simbolo de copyright -->
+        </div>
+      </section>
+    </footer><!-- fim do rodapé -->
+
+    <script>
+      // função chamada quando o usuário clica no card de Corte de Cabelo
+      function mostrarOpcoesCorte() {
+        const opcoesCorte = document.getElementById("opcoesCorte"); // pega a seção dos cortes pelo id
+        opcoesCorte.classList.toggle("mostrar"); // mostra ou esconde a seção
+
+        // quando abrir os cortes, leva a tela suavemente até eles
+        if (opcoesCorte.classList.contains("mostrar")) {
+          opcoesCorte.scrollIntoView({ behavior: "smooth", block: "center" });
+        }
+      }
+
+      // função chamada quando o usuário clica no card de Barba
+      function mostrarOpcoesBarba() {
+        const opcoesBarba = document.getElementById("opcoesBarba"); // pega a seção das opções pelo id
+        opcoesBarba.classList.toggle("mostrar"); // adiciona ou remove a classe que deixa a seção visível
+
+        // quando abrir as opções, leva a tela suavemente até elas
+        if (opcoesBarba.classList.contains("mostrar")) {
+          opcoesBarba.scrollIntoView({ behavior: "smooth", block: "center" });
+        }
+      }
+    </script>
+  </body><!-- fim do body -->
+</html><!-- fim do html -->
