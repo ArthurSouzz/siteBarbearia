@@ -11,8 +11,9 @@
     <header> <!-- tag para o conteudo introdutório da página, o cabeçalho -->
       <div class="cabecalho"> <!-- um container com uma classe para estilização do cabeçalho -->
         <h1 class="logo"><!-- titulo da pagina, que aparece no cabeçalho -->
-          <img src="./src/logoBarbeariaAtulizada.png" alt="" /> Barbearia do Fulano <!-- imagem de logo ao lado do título -->
+          <img src="./img/logoBarbeariaAtulizada.png" alt="" /> Barbearia do Fulano <!-- imagem de logo ao lado do título -->
         </h1>
+        <button class="btMenu" onclick="abrirMenu()">☰</button>
         <nav class="navbar"> <!-- tag para o menu de navegação, com uma classe para estilização -->
           <ul class="menu"><!-- lista não enumerada de itens no menu com uma classe -->
             <li><a href="index.html">Início</a></li>
@@ -57,22 +58,24 @@
         <h2>Nossos Cortes</h2>
         <div class="lista-cortes">
           <div class="opcao-corte">
-            <img src="./src/corte_degrade.png" alt="Corte degradê" />
+            <img src="./img/corte_degrade.png" alt="Corte degradê" />
             <h3>Degradê</h3>
             <p>Corte moderno com acabamento impecável.</p>
           </div>
 
           <div class="opcao-corte">
-            <img src="./src/corte_social.png" alt="Corte social" />
+            <img src="./img/corte_social.png" alt="Corte social" />
             <h3>Social</h3>
             <p>Elegância para qualquer ocasião.</p>
           </div>
 
           <div class="opcao-corte">
-            <img src="./src/corte_americano.png" alt="Corte americano" />
+            <img src="./img/corte_americano.png" alt="Corte americano" />
             <h3>Americano</h3>
             <p>Estilo atual e muito procurado.</p>
           </div>
+          <a href="agendamentos.html">Agendar Agora</a>
+          <button onclick="mostrarOpcoesCorte()">fechar</button>
         </div>
       </section>
 
@@ -104,29 +107,32 @@
             <h3>Barboterapia</h3>
             <p>Cuidado completo da barba com preparação da pele e acabamento detalhado.</p>
           </div>
+          <a href="agendamentos.html">Agendar Agora</a>
+          <button onclick="mostrarOpcoesBarba()">fechar</button>
         </div>
+
       </section>
 
       <h2 class="titulogaleria">Galeria de Imagens</h2><!-- título da seção da galeria -->
       <section class="galeria"><!-- seção da galeria -->
         <div class="containerGaleria"> <!-- container para as imagens da galeria -->
           <div class="imagemgaleria"><!-- container para cada imagem da galeria -->
-            <img src="./src/galeria1.jpg" alt="Imagem 1" /><!-- imagem da galeria -->
+            <img src="./img/galeria1.jpg" alt="Imagem 1" /><!-- imagem da galeria -->
           </div>
           <div class="imagemgaleria">
-            <img src="./src/galeria2.jpeg" alt="Imagem 2" />
+            <img src="./img/galeria2.jpeg" alt="Imagem 2" />
           </div>
           <div class="imagemgaleria">
-            <img src="./src/galeria3.jpeg" alt="Imagem 3" />
+            <img src="./img/galeria3.jpeg" alt="Imagem 3" />
           </div>
           <div class="imagemgaleria">
-            <img src="./src/galeria4.jpeg" alt="Imagem 4" />
+            <img src="./img/galeria4.jpeg" alt="Imagem 4" />
           </div>
           <div class="imagemgaleria">
-            <img src="./src/galeira5.jpeg" alt="Imagem 5" />
+            <img src="./img/galeira5.jpeg" alt="Imagem 5" />
           </div>
           <div class="imagemgaleria">
-            <img src="./src/galeria6.jpeg" alt="Imagem 6" />
+            <img src="./img/galeria6.jpeg" alt="Imagem 6" />
           </div>
         </div>
       </section>
@@ -135,7 +141,7 @@
         <div class="apresentabarbearia"> <!-- container para a apresentação da barbearia -->
           <h3>Barberia</h3> <!-- título do barbeiro -->
           <figure class="figuraapresenta"><!-- tag para uma figure, uma imagem com uma legenda  -->
-            <img class="imgapresenta" src="./src/ambiente3x4.jpg" alt="" /> <!-- imagem da barbearia -->
+            <img class="imgapresenta" src="./img/ambiente3x4.jpg" alt="" /> <!-- imagem da barbearia -->
             <figcaption> <!-- legenda da imagem figure -->
               <p>Barbearia Imperial</p> <!-- paragrafos -->
               <p>Estilo, precisão e atitude em cada corte.</p>
@@ -152,7 +158,7 @@
         <div class="apresentabarbeiro"> <!-- container para a apresentação do barbeiro -->
           <h3>Barbeiro</h3> <!-- título do barbeiro -->
           <figure class="figuraapresenta"><!-- tag para uma figure, uma imagem com uma legenda  -->
-            <img class="imgapresenta" src="./src/oCaba3x4.jpeg" alt="" /> <!-- imagem do barbeiro -->
+            <img class="imgapresenta" src="./img/oCaba3x4.jpeg" alt="" /> <!-- imagem do barbeiro -->
             <figcaption><!-- legenda da imagem figure -->
               <p>Gabriel Almeida</p><!--paragrafos  -->
               <p>Barbeiro profissional | Especialista em estilo masculino</p>
@@ -177,7 +183,7 @@
           </ul>
         </div>
         <div><!-- container para a logo da Barbearia -->
-          <img src="./src/logoBarbeariaAtulizada.png" alt="Logo da Barbearia" /><!-- imagem da logo -->
+          <img src="./img/logoBarbeariaAtulizada.png" alt="Logo da Barbearia" /><!-- imagem da logo -->
         </div>
         <div><!-- container para os direitos reservados -->
           <p>&copy; 2026 Barbearia do Fulano. Todos os direitos reservados.</p><!-- simbolo de copyright -->
@@ -185,28 +191,6 @@
       </section>
     </footer><!-- fim do rodapé -->
 
-    <script>
-      // função chamada quando o usuário clica no card de Corte de Cabelo
-      function mostrarOpcoesCorte() {
-        const opcoesCorte = document.getElementById("opcoesCorte"); // pega a seção dos cortes pelo id
-        opcoesCorte.classList.toggle("mostrar"); // mostra ou esconde a seção
-
-        // quando abrir os cortes, leva a tela suavemente até eles
-        if (opcoesCorte.classList.contains("mostrar")) {
-          opcoesCorte.scrollIntoView({ behavior: "smooth", block: "center" });
-        }
-      }
-
-      // função chamada quando o usuário clica no card de Barba
-      function mostrarOpcoesBarba() {
-        const opcoesBarba = document.getElementById("opcoesBarba"); // pega a seção das opções pelo id
-        opcoesBarba.classList.toggle("mostrar"); // adiciona ou remove a classe que deixa a seção visível
-
-        // quando abrir as opções, leva a tela suavemente até elas
-        if (opcoesBarba.classList.contains("mostrar")) {
-          opcoesBarba.scrollIntoView({ behavior: "smooth", block: "center" });
-        }
-      }
-    </script>
+    <script src="./script.js"></script>
   </body><!-- fim do body -->
 </html><!-- fim do html -->

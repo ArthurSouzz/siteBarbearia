@@ -3,223 +3,265 @@
 .color3 { #4d1a1a };
 .color4 { #661111 };
 .color5 { #800909 }; algumas cores para inspiração */
-body{ /* estilização do corpo do site */
-    background-color: #0D0D0D; /* definir cor de fundo */
-    color: #F5F5F5; /* definir cor do texto */
-    margin: 0;/* tirar margem nativa do navegador */
+body {
+  /* estilização do corpo do site */
+  background-color: #0d0d0d; /* definir cor de fundo */
+  color: #f5f5f5; /* definir cor do texto */
+  margin: 0; /* tirar margem nativa do navegador */
 }
-.cabecalho{/* estilização do cabeçalho, utilizando classe pra isso */
-    display: flex;/* declarar como flexível, utilizando flexbox para organizar componetes filhos */
-     justify-content: space-evenly; /*distribui os itens filhos de um contêiner de forma totalmente igualitária ao longo do eixo principal, nesse caso o horizontal */
-    align-items: center; /* centraliza os elementos filhos de um contêiner no eixo transversal (perpendicular ao principal), nesse caso o horizontal */
-    background-color: #181818 ;/* definisdo cor de fundo*/
-    border: #D62828 2px solid;/* define a borda do cabeçalho, com cor, espessura e estilo */
-    border-radius: 50px;/* arredonda os cantos  */
-    height: 70px;/* define uma altura */
-    position: absolute; /* remove o elemento do fluxo normal de página e posiciona em relação ao seu elemento pai */
-    top: 10px; /* define a distância do elemento em relação ao topo do elemento pai no topo */
-    left: 10px; /* define a distância do elemento em relação ao topo do elemento pai na esquerda */
-    right: 10px; /* define a distância do elemento em relação ao topo do elemento pai na direita */
-
+.cabecalho {
+  /* estilização do cabeçalho, utilizando classe pra isso */
+  display: flex; /* declarar como flexível, utilizando flexbox para organizar componetes filhos */
+  justify-content: space-evenly; /*distribui os itens filhos de um contêiner de forma totalmente igualitária ao longo do eixo principal, nesse caso o horizontal */
+  align-items: center; /* centraliza os elementos filhos de um contêiner no eixo transversal (perpendicular ao principal), nesse caso o horizontal */
+  background-color: #181818; /* definisdo cor de fundo*/
+  border: #d62828 2px solid; /* define a borda do cabeçalho, com cor, espessura e estilo */
+  border-radius: 50px; /* arredonda os cantos  */
+  height: 70px; /* define uma altura */
+  position: absolute; /* remove o elemento do fluxo normal de página e posiciona em relação ao seu elemento pai */
+  top: 10px; /* define a distância do elemento em relação ao topo do elemento pai no topo */
+  left: 10px; /* define a distância do elemento em relação ao topo do elemento pai na esquerda */
+  right: 10px; /* define a distância do elemento em relação ao topo do elemento pai na direita */
 }
-.logo{ /* estilização do logo, utilizando classe pra isso */
-    text-align: center;/* alinha o texto ao centro */
-    margin: 0;/* remove a margem nativa */
-    font-size: 40px;/* define o tamanho da fonte */
+.btMenu {
+  display: none;
+  background-color: #d62828;
+  color: #f5f5f5;
+  border: none;
+  font-size: 30px;
+  padding: 5px 10px;
+  border-radius: 50px;
+  border: #ffffff solid 1px;
 }
-.cabecalho img{/*  estilização da imagem do cabeçalho, utilizando a tag dento de um elemento com classe  */
-    height: 70px; /* define a altura da imagem */
-    width: 70px;/* define a largura da imagem */
-    vertical-align: middle;/* alinha verticalmente em relação ao conteúdo do elemento pai */
+.logo {
+  /* estilização do logo, utilizando classe pra isso */
+  text-align: center; /* alinha o texto ao centro */
+  margin: 0; /* remove a margem nativa */
+  font-size: 40px; /* define o tamanho da fonte */
 }
-.navbar a{/*estilização dos links do menu de navegação, utilizando a tag dento de um elemento com classe  */
-    padding: 10px 20px;/* define o espaçamento interno do link, 10px em cima e embaixo, 20px na esquerda e direita */
-    font-size: 20px;/* define o tamanho da fonte */
-    border-radius: 50px;
-    text-decoration: none; /* remove a decoração padrão dos links, como sublinhado */
-    border: #D62828 solid 1px;
-    color: #F5F5F5;
-    transition: border 1s;/* define uma transição suave para a borda do link, com duração de 1 segundo */
+.cabecalho img {
+  /*  estilização da imagem do cabeçalho, utilizando a tag dento de um elemento com classe  */
+  height: 70px; /* define a altura da imagem */
+  width: 70px; /* define a largura da imagem */
+  vertical-align: middle; /* alinha verticalmente em relação ao conteúdo do elemento pai */
 }
-.navbar a:hover{
-    border: #2563EB solid 1px;/* define a borda do link quando o mouse estiver sobre ele, com cor, espessura e estilo */
+.navbar a {
+  /*estilização dos links do menu de navegação, utilizando a tag dento de um elemento com classe  */
+  padding: 10px 20px; /* define o espaçamento interno do link, 10px em cima e embaixo, 20px na esquerda e direita */
+  font-size: 20px; /* define o tamanho da fonte */
+  border-radius: 50px;
+  text-decoration: none; /* remove a decoração padrão dos links, como sublinhado */
+  border: #d62828 solid 1px;
+  color: #f5f5f5;
+  transition: border 1s; /* define uma transição suave para a borda do link, com duração de 1 segundo */
 }
-.navbar ul{/* estilização da lista do menu de navegação, utilizando a tag dento de um elemento com classe  */
-    list-style-type: none;/* remove os marcadores da lista */
-    display: flex;
-    justify-content: space-evenly;
-    gap: 10px ;/* define o espaçamento entre os itens da lista */
+.navbar a:hover {
+  border: #2563eb solid 1px; /* define a borda do link quando o mouse estiver sobre ele, com cor, espessura e estilo */
 }
-.banner{/* estilização do banner, utilizando classe pra isso */
-    background-image: url(./src/bannerBarbeariaInicialMenor.jpg);/* define a imagem de fundo do banner */
-    height: 720px;
-    background-size:cover;/* define o tamanho da imagem de fundo para cobrir todo o elemento */
-    background-position: center;/* define a posição da imagem de fundo para centralizar */
-    background-repeat: no-repeat;/* define que a imagem de fundo não se repita */
-    display: flex;
-    flex-direction: column;/* define a direção dos itens filhos do banner para coluna */
-    justify-content: center;
-    align-items: center;
+.navbar ul {
+  /* estilização da lista do menu de navegação, utilizando a tag dento de um elemento com classe  */
+  list-style-type: none; /* remove os marcadores da lista */
+  display: flex;
+  justify-content: space-evenly;
+  gap: 10px; /* define o espaçamento entre os itens da lista */
 }
-.banner h2{/* estilização do título do banner, utilizando a tag dento de um elemento com classe  */
-    font-size: 50px;
-    margin: 0;
+.banner {
+  /* estilização do banner, utilizando classe pra isso */
+  background-image: url(./img/bannerBarbeariaInicialMenor.jpg); /* define a imagem de fundo do banner */
+  height: 720px;
+  background-size: cover; /* define o tamanho da imagem de fundo para cobrir todo o elemento */
+  background-position: center; /* define a posição da imagem de fundo para centralizar */
+  background-repeat: no-repeat; /* define que a imagem de fundo não se repita */
+  display: flex;
+  flex-direction: column; /* define a direção dos itens filhos do banner para coluna */
+  justify-content: center;
+  align-items: center;
 }
-.banner p{/* estilização do parágrafo do banner, utilizando a tag dento de um elemento com classe  */
-    font-size: 30px;
-    margin: 10px 0;/* define a margem do parágrafo, 10px em cima e embaixo, 0px na esquerda e direita */
+.banner h2 {
+  /* estilização do título do banner, utilizando a tag dento de um elemento com classe  */
+  font-size: 50px;
+  margin: 0;
 }
-.banner .btn-agendar{/* estilização do botão do banner, utilizando a tag dento de um elemento com classe  */
-    padding: 10px 20px;/* define o espaçamento interno do botão, 10px em cima e embaixo, 20px na esquerda e direita */
-    font-size: 30px;
-    border-radius: 50px;
-    text-decoration: none;
-    border: #ffffff solid 2px;
-    color: #F5F5F5;
-    transition: background-color 1s;/* define uma transição suave para a cor de fundo do botão, com duração de 1 segundo */
-    background-color: #D62828;
+.banner p {
+  /* estilização do parágrafo do banner, utilizando a tag dento de um elemento com classe  */
+  font-size: 30px;
+  margin: 10px 0; /* define a margem do parágrafo, 10px em cima e embaixo, 0px na esquerda e direita */
 }
-.banner .btn-agendar:hover{/* define a cor de fundo do botão quando o mouse estiver sobre ele */
-    background-color: #2563EB;
+.banner .btn-agendar {
+  /* estilização do botão do banner, utilizando a tag dento de um elemento com classe  */
+  padding: 10px 20px; /* define o espaçamento interno do botão, 10px em cima e embaixo, 20px na esquerda e direita */
+  font-size: 30px;
+  border-radius: 50px;
+  text-decoration: none;
+  border: #ffffff solid 2px;
+  color: #f5f5f5;
+  transition: background-color 1s; /* define uma transição suave para a cor de fundo do botão, com duração de 1 segundo */
+  background-color: #d62828;
 }
-.tituloservicos{/* estilização dos títulos dos serviços, utilizando classe pra isso */
-    text-align: center;/* alinha o texto ao centro */
-    font-size: 40px;
-    background-color: #181818;
-    margin: 30px 0 0 0;/* define a margem do título, 30px em cima, 0px embaixo, 0px na esquerda e direita */
-    
+.banner .btn-agendar:hover {
+  /* define a cor de fundo do botão quando o mouse estiver sobre ele */
+  background-color: #2563eb;
 }
-.servicos{/* estilização dos serviços, utilizando classe pra isso */
-    display: flex;
-    justify-content: space-evenly;
-    background-color: #181818;
-    padding: 20px;
-
+.tituloservicos {
+  /* estilização dos títulos dos serviços, utilizando classe pra isso */
+  text-align: center; /* alinha o texto ao centro */
+  font-size: 40px;
+  background-color: #181818;
+  margin: 30px 0 0 0; /* define a margem do título, 30px em cima, 0px embaixo, 0px na esquerda e direita */
 }
-.servicos div{/* estilização dos containers dos serviços, utilizando a tag div dento de um elemento com classe  */
-    border: #D62828 solid 2px  ;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column;
-    padding: 20px;
-    width: 300px;
-    height: 300px;
-    border-radius: 20px;
-    transition: border 1s;
+.servicos {
+  /* estilização dos serviços, utilizando classe pra isso */
+  display: flex;
+  justify-content: space-evenly;
+  background-color: #181818;
+  padding: 20px;
 }
-.servicos div h3{/* estilização dos títulos dos serviços, utilizando a tag h3 dento de um elemento com classe  */
-    font-size: 30px;
-    margin: 0;
+.servicos div {
+  /* estilização dos containers dos serviços, utilizando a tag div dento de um elemento com classe  */
+  border: #d62828 solid 2px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  padding: 20px;
+  width: 300px;
+  height: 300px;
+  border-radius: 20px;
+  transition: border 1s;
 }
-.servicos div p{/* estilização dos parágrafos dos serviços, utilizando a tag p dento de um elemento com classe  */
-    font-size: 20px;
-    text-align: center;
+.servicos div h3 {
+  /* estilização dos títulos dos serviços, utilizando a tag h3 dento de um elemento com classe  */
+  font-size: 30px;
+  margin: 0;
 }
-.servicos div:hover{/* define a borda do container dos serviços quando o mouse estiver sobre ele */
-    border: #2563EB solid 2px;
+.servicos div p {
+  /* estilização dos parágrafos dos serviços, utilizando a tag p dento de um elemento com classe  */
+  font-size: 20px;
+  text-align: center;
 }
-.titulogaleria{/* estilização do título da galeria, utilizando classe pra isso */
-    text-align: center;
-    font-size: 40px;
-    background-color: #181818;
-    margin: 30px 0 0 0;
-    
+.servicos div:hover {
+  /* define a borda do container dos serviços quando o mouse estiver sobre ele */
+  border: #2563eb solid 2px;
 }
-.containerGaleria{/* estilização do container da galeria, utilizando classe pra isso */
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    background-color: #181818;
-    gap: 20px;
+.titulogaleria {
+  /* estilização do título da galeria, utilizando classe pra isso */
+  text-align: center;
+  font-size: 40px;
+  background-color: #181818;
+  margin: 30px 0 0 0;
 }
-.containerGaleria img{/* estilização das imagens da galeria, utilizando a tag img dento de um elemento com classe  */
-    width: 400px;
-    height: 400px;
+.containerGaleria {
+  /* estilização do container da galeria, utilizando classe pra isso */
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  background-color: #181818;
+  gap: 20px;
 }
-.tituloapresentacao{/* estilização do título da apresentação, utilizando classe pra isso */
-    text-align: center;
-    font-size: 40px;
-    background-color: #181818;
-    margin: 30px 0 0 0;
+.containerGaleria img {
+  /* estilização das imagens da galeria, utilizando a tag img dento de um elemento com classe  */
+  width: 400px;
+  height: 400px;
 }
-.apresentacao{/* estilização do container da apresentação, utilizando classe pra isso */
-    display: flex;
-    justify-content:center;
-    background-color: #181818;
-    align-items: center;
+.tituloapresentacao {
+  /* estilização do título da apresentação, utilizando classe pra isso */
+  text-align: center;
+  font-size: 40px;
+  background-color: #181818;
+  margin: 30px 0 0 0;
 }
-.apresentabarbearia{/* estilização do container da apresentação da barbearia, utilizando classe pra isso */
-    border-right: #2563EB solid 4px;
-    padding: 40px;
-    width: 35%;
-    height: 400px;
+.apresentacao {
+  /* estilização do container da apresentação, utilizando classe pra isso */
+  display: flex;
+  justify-content: center;
+  background-color: #181818;
+  align-items: center;
 }
-.apresentabarbeiro{/* estilização do container da apresentação do barbeiro, utilizando classe pra isso */
-    border-left: #D62828 solid 4px;
-    padding: 40px;
-    width: 35%;
-    height: 400px;
-
+.apresentabarbearia {
+  /* estilização do container da apresentação da barbearia, utilizando classe pra isso */
+  border-right: #2563eb solid 4px;
+  padding: 40px;
+  width: 35%;
+  height: 400px;
 }
-.apresentabarbearia h3 {/* estilização do título da apresentação da barbearia, utilizando a tag h3 dento de um elemento com classe  */
-    font-size: 30px;
-    text-align: center;
+.apresentabarbeiro {
+  /* estilização do container da apresentação do barbeiro, utilizando classe pra isso */
+  border-left: #d62828 solid 4px;
+  padding: 40px;
+  width: 35%;
+  height: 400px;
 }
-.apresentabarbeiro h3 {/* estilização do título da apresentação do barbeiro, utilizando a tag h3 dento de um elemento com classe  */
-    font-size: 30px;
-    text-align: center;
+.apresentabarbearia h3 {
+  /* estilização do título da apresentação da barbearia, utilizando a tag h3 dento de um elemento com classe  */
+  font-size: 30px;
+  text-align: center;
 }
-.imgapresenta{/* estilização das imagens da apresentação, utilizando a tag img dento de um elemento com classe  */
-    width: 200px;
-    height: 260px;
+.apresentabarbeiro h3 {
+  /* estilização do título da apresentação do barbeiro, utilizando a tag h3 dento de um elemento com classe  */
+  font-size: 30px;
+  text-align: center;
 }
-.figuraapresenta{/* estilização das figuras da apresentação, utilizando a tag figure dento de um elemento com classe  */
-    display: flex;
-    flex-direction:row;/* define a direção dos itens filhos da figura para linha */
-    gap:30px;
+.imgapresenta {
+  /* estilização das imagens da apresentação, utilizando a tag img dento de um elemento com classe  */
+  width: 200px;
+  height: 260px;
 }
-footer{/* estilização do rodapé, utilizando a tag footer */
-    height: 200px;
-    background-color: #181818;
-    margin-top: 30px;
-    margin-bottom: 30px;
+.figuraapresenta {
+  /* estilização das figuras da apresentação, utilizando a tag figure dento de um elemento com classe  */
+  display: flex;
+  flex-direction: row; /* define a direção dos itens filhos da figura para linha */
+  gap: 30px;
 }
-.principalfooter{/* estilização do container principal do rodapé, utilizando classe pra isso */
-    display: flex;
-    justify-content: space-evenly;
-    align-items: center;
-    height: 100%;
+footer {
+  /* estilização do rodapé, utilizando a tag footer */
+  height: 200px;
+  background-color: #181818;
+  margin-top: 30px;
+  margin-bottom: 30px;
 }
-.principalfooter h3{/* estilização dos títulos do rodapé, utilizando a tag h3 dento de um elemento com classe  */
-    font-size: 20px;
-    margin: 0;
+.principalfooter {
+  /* estilização do container principal do rodapé, utilizando classe pra isso */
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  height: 100%;
 }
-.principalfooter ul{/* estilização das listas do rodapé, utilizando a tag ul dento de um elemento com classe  */
-    list-style-type: none;
-    padding: 0;
+.principalfooter h3 {
+  /* estilização dos títulos do rodapé, utilizando a tag h3 dento de um elemento com classe  */
+  font-size: 20px;
+  margin: 0;
 }
-.principalfooter ul li{/* estilização dos itens das listas do rodapé, utilizando a tag li dento de um elemento com classe  */
-    margin: 5px 0;
+.principalfooter ul {
+  /* estilização das listas do rodapé, utilizando a tag ul dento de um elemento com classe  */
+  list-style-type: none;
+  padding: 0;
 }
-.principalfooter ul li a{/* estilização dos links das listas do rodapé, utilizando a tag a dento de um elemento com classe  */
-    text-decoration: none;
-    color: #F5F5F5;
-    transition: color 1s;
+.principalfooter ul li {
+  /* estilização dos itens das listas do rodapé, utilizando a tag li dento de um elemento com classe  */
+  margin: 5px 0;
 }
-.principalfooter ul li a:hover{/* define a cor do link quando o mouse estiver sobre ele */
-    color: #2563EB;
+.principalfooter ul li a {
+  /* estilização dos links das listas do rodapé, utilizando a tag a dento de um elemento com classe  */
+  text-decoration: none;
+  color: #f5f5f5;
+  transition: color 1s;
 }
-.principalfooter img{/* estilização das imagens do rodapé, utilizando a tag img dento de um elemento com classe  */
-    height: 100px;
-    width: 100px;
+.principalfooter ul li a:hover {
+  /* define a cor do link quando o mouse estiver sobre ele */
+  color: #2563eb;
 }
-.principalfooter div{/* estilização dos containers do rodapé, utilizando a tag div dento de um elemento com classe  */
-    text-align: center;
-    width: 33%;
-    border-left: #D62828 solid 2px;
-    border-right: #2563EB solid 2px;
-    height: 100px;
+.principalfooter img {
+  /* estilização das imagens do rodapé, utilizando a tag img dento de um elemento com classe  */
+  height: 100px;
+  width: 100px;
+}
+.principalfooter div {
+  /* estilização dos containers do rodapé, utilizando a tag div dento de um elemento com classe  */
+  text-align: center;
+  width: 33%;
+  border-left: #d62828 solid 2px;
+  border-right: #2563eb solid 2px;
+  height: 100px;
 }
 /* fim parte Arthur */
 
@@ -230,7 +272,6 @@ footer{/* estilização do rodapé, utilizando a tag footer */
   padding: 50px;
 }
 
-
 /* Título "Agende seu horário" */
 .pagina-agendamento h2 {
   text-align: center;
@@ -240,7 +281,6 @@ footer{/* estilização do rodapé, utilizando a tag footer */
   line-height: 1.3;
 }
 
-
 /* Texto que fica abaixo do título */
 .pagina-agendamento > p {
   text-align: center;
@@ -248,7 +288,6 @@ footer{/* estilização do rodapé, utilizando a tag footer */
 
   font-size: 18px;
 }
-
 
 /* Organização do formulário */
 .formulario-agendamento {
@@ -259,7 +298,6 @@ footer{/* estilização do rodapé, utilizando a tag footer */
   gap: 30px;
 }
 
-
 /* Cada campo do formulário */
 .campo {
   display: flex;
@@ -269,13 +307,11 @@ footer{/* estilização do rodapé, utilizando a tag footer */
   gap: 10px;
 }
 
-
 /* Nome que aparece em cima dos campos */
 .campo label {
   font-size: 18px;
   font-weight: bold;
 }
-
 
 /* Caixas onde o usuário coloca as informações */
 .campo input,
@@ -294,7 +330,6 @@ footer{/* estilização do rodapé, utilizando a tag footer */
   font-size: 17px;
 }
 
-
 /* Deixa a área de observações maior */
 .campo textarea {
   min-height: 150px;
@@ -302,7 +337,6 @@ footer{/* estilização do rodapé, utilizando a tag footer */
   /* Permite aumentar a caixa manualmente */
   resize: vertical;
 }
-
 
 /* Data e horário ficam lado a lado */
 .linha {
@@ -312,12 +346,10 @@ footer{/* estilização do rodapé, utilizando a tag footer */
   gap: 30px;
 }
 
-
 /* Os dois campos ficam com o mesmo tamanho */
 .linha .campo {
   flex: 1;
 }
-
 
 /* Botão de confirmar */
 .btn-confirmar {
@@ -334,12 +366,9 @@ footer{/* estilização do rodapé, utilizando a tag footer */
   cursor: pointer;
 }
 
-
-
 .btn-confirmar:hover {
   opacity: 0.85;
 }
-
 
 /* Botão para voltar para a página inicial */
 .btn-voltar {
@@ -357,159 +386,298 @@ footer{/* estilização do rodapé, utilizando a tag footer */
   text-decoration: none;
 }
 
-
-
 @media (max-width: 600px) {
-
   /* Diminui um pouco o espaço n */
   .pagina-agendamento {
     margin: 30px 15px;
     padding: 25px;
   }
 
-
-  
   .pagina-agendamento h2 {
     font-size: 28px;
   }
-
 
   /* Data e horário ficam um embaixo do outro */
   .linha {
     flex-direction: column;
     gap: 30px;
   }
-
 }
 /* fim da parte do matheus */
 
 /* deixa claro que o card Barba pode ser clicado */
-.servico-barba{
-    cursor: pointer;
+.servico-barba {
+  cursor: pointer;
 }
-.ver-opcoes{
-    font-size: 16px;
-    margin-top: 10px;
+.ver-opcoes {
+  font-size: 16px;
+  margin-top: 10px;
 }
 
 /* seção das opções de barba: começa escondida */
-.opcoes-barba{
-    display: none;
-    background-color: #181818;
-    padding: 20px;
-    text-align: center;
+.opcoes-barba {
+  display: none;
+  background-color: #181818;
+  padding: 20px;
+  text-align: center;
 }
 
 /* esta classe é adicionada pelo JavaScript quando o usuário clica em Barba */
-.opcoes-barba.mostrar{
-    display: block;
+.opcoes-barba.mostrar {
+  display: block;
 }
-.opcoes-barba h2{
-    font-size: 35px;
-    margin: 10px 0 25px 0;
+.opcoes-barba h2 {
+  font-size: 35px;
+  margin: 10px 0 25px 0;
 }
-.lista-barbas{
-    display: flex;
-    justify-content: center;
-    gap: 30px;
-    flex-wrap: wrap;
+.lista-barbas {
+  display: flex;
+  justify-content: center;
+  gap: 30px;
+  flex-wrap: wrap;
 }
-.opcao-barba{
-    border: #D62828 solid 2px;
-    width: 300px;
-    min-height: 380px;
-    border-radius: 20px;
-    padding: 15px;
-    display: flex;
-    flex-direction: column;
-    justify-content: flex-start;
-    align-items: center;
-    overflow: hidden;
-    transition: border 1s;
+.opcao-barba {
+  border: #d62828 solid 2px;
+  width: 300px;
+  min-height: 380px;
+  border-radius: 20px;
+  padding: 15px;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+  overflow: hidden;
+  transition: border 1s;
 }
 
-.opcao-barba img{
-    width: 100%;
-    height: 220px;
-    object-fit: cover;
-    border-radius: 14px;
-    margin-bottom: 18px;
+.opcao-barba img {
+  width: 100%;
+  height: 220px;
+  object-fit: cover;
+  border-radius: 14px;
+  margin-bottom: 18px;
 }
-.opcao-barba:hover{
-    border: #2563EB solid 2px;
+.opcao-barba:hover {
+  border: #2563eb solid 2px;
 }
-.opcao-barba h3{
-    font-size: 26px;
-    margin: 0;
+.opcao-barba h3 {
+  font-size: 26px;
+  margin: 0;
 }
-.opcao-barba p{
-    font-size: 18px;
-    text-align: center;
+.opcao-barba p {
+  font-size: 18px;
+  text-align: center;
 }
 
 /* fim */
 
 /* deixa claro que o card Corte de Cabelo pode ser clicado */
-.servico-corte{
-    cursor: pointer;
+.servico-corte {
+  cursor: pointer;
 }
 
 /* seção dos cortes: começa escondida */
-.opcoes-corte{
-    display: none;
-    background-color: #181818;
-    padding: 20px;
-    text-align: center;
+.opcoes-corte {
+  display: none;
+  background-color: #181818;
+  padding: 20px;
+  text-align: center;
 }
 
 /* esta classe é adicionada pelo JavaScript quando o usuário clica em Corte de Cabelo */
-.opcoes-corte.mostrar{
+.opcoes-corte.mostrar {
+  display: block;
+}
+
+.opcoes-corte h2 {
+  font-size: 35px;
+  margin: 10px 0 25px 0;
+}
+
+.lista-cortes {
+  display: flex;
+  justify-content: space-evenly;
+  gap: 30px;
+  flex-wrap: wrap;
+}
+
+.opcao-corte {
+  border: #d62828 solid 2px;
+  width: 300px;
+  min-height: 310px;
+  border-radius: 20px;
+  padding: 15px;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+  overflow: hidden;
+  transition: border 1s;
+}
+
+.opcao-corte:hover {
+  border: #2563eb solid 2px;
+}
+
+.opcao-corte img {
+  width: 180px;
+  height: 180px;
+  object-fit: cover;
+  margin: 5px 0 0 0;
+}
+
+.opcao-corte h3 {
+  font-size: 30px;
+  margin: 0;
+}
+
+.opcao-corte p {
+  font-size: 20px;
+  text-align: center;
+}
+
+.opcoes-corte a {
+  margin-top: 10px;
+  padding: 10px 20px;
+  font-size: 20px;
+  border-radius: 50px;
+  text-decoration: none;
+  border: #ffffff solid 1px;
+  color: #f5f5f5;
+  transition: background-color 0.5s;
+  background-color: #d62828;
+}
+.opcoes-corte a:hover {
+  background-color: #2563eb;
+}
+.opcoes-corte button {
+  margin-top: 10px;
+  padding: 10px 20px;
+  font-size: 20px;
+  border-radius: 50px;
+  text-decoration: none;
+  border: #ffffff solid 1px;
+  color: #f5f5f5;
+  transition: background-color 0.5s;
+  background-color: #d62828;
+}
+.opcoes-corte button:hover {
+  background-color: #2563eb;
+}
+
+.opcoes-barba a {
+  margin-top: 10px;
+  padding: 10px 20px;
+  font-size: 20px;
+  border-radius: 50px;
+  text-decoration: none;
+  border: #ffffff solid 1px;
+  color: #f5f5f5;
+  transition: background-color 0.5s;
+  background-color: #d62828;
+}
+.opcoes-barba a:hover {
+  background-color: #2563eb;
+}
+
+.opcoes-barba button {
+  margin-top: 10px;
+  padding: 10px 20px;
+  font-size: 20px;
+  border-radius: 50px;
+  text-decoration: none;
+  border: #ffffff solid 1px;
+  color: #f5f5f5;
+  transition: background-color 0.5s;
+  background-color: #d62828;
+}
+.opcoes-barba button:hover {
+  background-color: #2563eb;
+}
+/* responsividade */
+@media (max-width: 800px) {
+  /* arrumando a navbar */
+  .btMenu {
     display: block;
-}
-
-.opcoes-corte h2{
-    font-size: 35px;
-    margin: 10px 0 25px 0;
-}
-
-.lista-cortes{
-    display: flex;
-    justify-content: space-evenly;
-    gap: 30px;
-    flex-wrap: wrap;
-}
-
-.opcao-corte{
-    border: #D62828 solid 2px;
-    width: 300px;
-    min-height: 310px;
+    transition: background-color 0.5s;
+  }
+  .btMenu:hover {
+    background-color: #2563eb;
+  }
+  .navbar {
+    display: none;
+    position: absolute;
+    top: 70px;
+    right: 10px;
+    background-color: #181818;
     border-radius: 20px;
-    padding: 15px;
-    display: flex;
-    flex-direction: column;
-    justify-content: flex-start;
-    align-items: center;
-    overflow: hidden;
-    transition: border 1s;
-}
-
-.opcao-corte:hover{
-    border: #2563EB solid 2px;
-}
-
-.opcao-corte img{
-    width: 180px;
-    height: 180px;
-    object-fit: cover;
-    margin: 5px 0 0 0;
-}
-
-.opcao-corte h3{
+  }
+  .cabecalho {
+    height: auto;
+    gap: 10px;
+    padding: 10px;
+  }
+  .logo {
     font-size: 30px;
-    margin: 0;
-}
+  }
+  .navbar ul {
+    flex-direction: column;
+    gap: 25px;
+  }
 
-.opcao-corte p{
+  /* arrumando o banner */
+
+  .banner {
+    height: 550px;
+  }
+  .banner h2 {
+    font-size: 30px;
+    text-align: center;
+  }
+  .banner p {
     font-size: 20px;
     text-align: center;
+  }
+
+  /* arrumando os serviços */
+  .servicos {
+    flex-wrap: wrap;
+    gap: 20px;
+  }
+  .servicos div {
+    width: 100%;
+    height: 100px;
+  }
+
+  /* arrumando a galeria */
+
+    .containerGaleria img {
+        width: 150px;
+        height: 150px;
+    }
+    .apresentacao{
+        flex-direction: column;
+    }
+    .apresentabarbearia{
+        width: 80%;
+        height: auto;
+        border-bottom: #2563eb solid 5px;
+        border-right: none;
+    }
+    .apresentabarbeiro{
+        width: 80%;
+        height: auto;
+        border-top: #d62828 solid 5px;
+        border-left: none;
+
+    }
+    .figuraapresenta{
+        flex-direction: column;
+        align-items: center;
+        margin: 0;
+    }
+    .imgapresenta{
+        width: 100%;
+        height: auto;
+    }
 }
