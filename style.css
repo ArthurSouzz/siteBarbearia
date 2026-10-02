@@ -1,12 +1,14 @@
-/* .color1 { #1a2b2b };
-.color2 { #332222 };
-.color3 { #4d1a1a };
-.color4 { #661111 };
-.color5 { #800909 }; algumas cores para inspiração */
+:root{
+  --cor-principal:#d62828;
+  --cor-secundaria: #2563eb;
+  --cor-fundo: #0d0d0d;
+  --cor-fundo-claro:#181818;
+  --cor-texto: #f5f5f5;
+}
 body {
   /* estilização do corpo do site */
-  background-color: #0d0d0d; /* definir cor de fundo */
-  color: #f5f5f5; /* definir cor do texto */
+  background-color:var(--cor-fundo); /* definir cor de fundo */
+  color: var(--cor-texto); /* definir cor do texto */
   margin: 0; /* tirar margem nativa do navegador */
 }
 .cabecalho {
@@ -14,8 +16,8 @@ body {
   display: flex; /* declarar como flexível, utilizando flexbox para organizar componetes filhos */
   justify-content: space-evenly; /*distribui os itens filhos de um contêiner de forma totalmente igualitária ao longo do eixo principal, nesse caso o horizontal */
   align-items: center; /* centraliza os elementos filhos de um contêiner no eixo transversal (perpendicular ao principal), nesse caso o horizontal */
-  background-color: #181818; /* definisdo cor de fundo*/
-  border: #d62828 2px solid; /* define a borda do cabeçalho, com cor, espessura e estilo */
+  background-color: var(--cor-fundo-claro); /* definisdo cor de fundo*/
+  border: var(--cor-principal) 2px solid; /* define a borda do cabeçalho, com cor, espessura e estilo */
   border-radius: 50px; /* arredonda os cantos  */
   height: 70px; /* define uma altura */
   position: absolute; /* remove o elemento do fluxo normal de página e posiciona em relação ao seu elemento pai */
@@ -25,8 +27,8 @@ body {
 }
 .btMenu {
   display: none;
-  background-color: #d62828;
-  color: #f5f5f5;
+  background-color: var(--cor-principal);
+  color: var(--cor-texto);
   border: none;
   font-size: 30px;
   padding: 5px 10px;
@@ -51,12 +53,12 @@ body {
   font-size: 20px; /* define o tamanho da fonte */
   border-radius: 50px;
   text-decoration: none; /* remove a decoração padrão dos links, como sublinhado */
-  border: #d62828 solid 1px;
-  color: #f5f5f5;
+  border: var(--cor-principal) solid 1px;
+  color: var(--cor-texto);
   transition: border 1s; /* define uma transição suave para a borda do link, com duração de 1 segundo */
 }
 .navbar a:hover {
-  border: #2563eb solid 1px; /* define a borda do link quando o mouse estiver sobre ele, com cor, espessura e estilo */
+  border: var(--cor-secundaria) solid 1px; /* define a borda do link quando o mouse estiver sobre ele, com cor, espessura e estilo */
 }
 .navbar ul {
   /* estilização da lista do menu de navegação, utilizando a tag dento de um elemento com classe  */
@@ -94,31 +96,31 @@ body {
   border-radius: 50px;
   text-decoration: none;
   border: #ffffff solid 2px;
-  color: #f5f5f5;
+  color: var(--cor-texto);
   transition: background-color 1s; /* define uma transição suave para a cor de fundo do botão, com duração de 1 segundo */
-  background-color: #d62828;
+  background-color: var(--cor-principal);
 }
 .banner .btn-agendar:hover {
   /* define a cor de fundo do botão quando o mouse estiver sobre ele */
-  background-color: #2563eb;
+  background-color: var(--cor-secundaria);
 }
 .tituloservicos {
   /* estilização dos títulos dos serviços, utilizando classe pra isso */
   text-align: center; /* alinha o texto ao centro */
   font-size: 40px;
-  background-color: #181818;
+  background-color: var(--cor-fundo-claro);
   margin: 30px 0 0 0; /* define a margem do título, 30px em cima, 0px embaixo, 0px na esquerda e direita */
 }
 .servicos {
   /* estilização dos serviços, utilizando classe pra isso */
   display: flex;
   justify-content: space-evenly;
-  background-color: #181818;
+  background-color: var(--cor-fundo-claro);
   padding: 20px;
 }
 .servicos div {
   /* estilização dos containers dos serviços, utilizando a tag div dento de um elemento com classe  */
-  border: #d62828 solid 2px;
+  border: var(--cor-principal) solid 2px;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -141,13 +143,13 @@ body {
 }
 .servicos div:hover {
   /* define a borda do container dos serviços quando o mouse estiver sobre ele */
-  border: #2563eb solid 2px;
+  border: var(--cor-secundaria) solid 2px;
 }
 .titulogaleria {
   /* estilização do título da galeria, utilizando classe pra isso */
   text-align: center;
   font-size: 40px;
-  background-color: #181818;
+  background-color: var(--cor-fundo-claro);
   margin: 30px 0 0 0;
 }
 .containerGaleria {
@@ -155,7 +157,7 @@ body {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
-  background-color: #181818;
+  background-color: var(--cor-fundo-claro);
   gap: 20px;
 }
 .containerGaleria img {
@@ -167,26 +169,26 @@ body {
   /* estilização do título da apresentação, utilizando classe pra isso */
   text-align: center;
   font-size: 40px;
-  background-color: #181818;
+  background-color: var(--cor-fundo-claro);
   margin: 30px 0 0 0;
 }
 .apresentacao {
   /* estilização do container da apresentação, utilizando classe pra isso */
   display: flex;
   justify-content: center;
-  background-color: #181818;
+  background-color: var(--cor-fundo-claro);
   align-items: center;
 }
 .apresentabarbearia {
   /* estilização do container da apresentação da barbearia, utilizando classe pra isso */
-  border-right: #2563eb solid 4px;
+  border-right: var(--cor-secundaria) solid 4px;
   padding: 40px;
   width: 35%;
   height: 400px;
 }
 .apresentabarbeiro {
   /* estilização do container da apresentação do barbeiro, utilizando classe pra isso */
-  border-left: #d62828 solid 4px;
+  border-left: var(--cor-principal) solid 4px;
   padding: 40px;
   width: 35%;
   height: 400px;
@@ -215,7 +217,7 @@ body {
 footer {
   /* estilização do rodapé, utilizando a tag footer */
   height: 200px;
-  background-color: #181818;
+  background-color: var(--cor-fundo-claro);
   margin-top: 30px;
   margin-bottom: 30px;
 }
@@ -243,12 +245,12 @@ footer {
 .principalfooter ul li a {
   /* estilização dos links das listas do rodapé, utilizando a tag a dento de um elemento com classe  */
   text-decoration: none;
-  color: #f5f5f5;
+  color: var(--cor-texto);
   transition: color 1s;
 }
 .principalfooter ul li a:hover {
   /* define a cor do link quando o mouse estiver sobre ele */
-  color: #2563eb;
+  color: var(--cor-secundaria);
 }
 .principalfooter img {
   /* estilização das imagens do rodapé, utilizando a tag img dento de um elemento com classe  */
@@ -259,8 +261,8 @@ footer {
   /* estilização dos containers do rodapé, utilizando a tag div dento de um elemento com classe  */
   text-align: center;
   width: 33%;
-  border-left: #d62828 solid 2px;
-  border-right: #2563eb solid 2px;
+  border-left: var(--cor-principal) solid 2px;
+  border-right: var(--cor-secundaria) solid 2px;
   height: 100px;
 }
 /* fim parte Arthur */
@@ -417,7 +419,7 @@ footer {
 /* seção das opções de barba: começa escondida */
 .opcoes-barba {
   display: none;
-  background-color: #181818;
+  background-color: var(--cor-fundo-claro);
   padding: 20px;
   text-align: center;
 }
@@ -437,7 +439,7 @@ footer {
   flex-wrap: wrap;
 }
 .opcao-barba {
-  border: #d62828 solid 2px;
+  border: var(--cor-principal) solid 2px;
   width: 300px;
   min-height: 380px;
   border-radius: 20px;
@@ -458,7 +460,7 @@ footer {
   margin-bottom: 18px;
 }
 .opcao-barba:hover {
-  border: #2563eb solid 2px;
+  border: var(--cor-secundaria) solid 2px;
 }
 .opcao-barba h3 {
   font-size: 26px;
@@ -468,7 +470,12 @@ footer {
   font-size: 18px;
   text-align: center;
 }
-
+.opcoes-botao{
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  align-items: center;
+}
 /* fim */
 
 /* deixa claro que o card Corte de Cabelo pode ser clicado */
@@ -479,7 +486,7 @@ footer {
 /* seção dos cortes: começa escondida */
 .opcoes-corte {
   display: none;
-  background-color: #181818;
+  background-color: var(--cor-fundo-claro);
   padding: 20px;
   text-align: center;
 }
@@ -502,7 +509,7 @@ footer {
 }
 
 .opcao-corte {
-  border: #d62828 solid 2px;
+  border: var(--cor-principal) solid 2px;
   width: 300px;
   min-height: 310px;
   border-radius: 20px;
@@ -516,7 +523,7 @@ footer {
 }
 
 .opcao-corte:hover {
-  border: #2563eb solid 2px;
+  border: var(--cor-secundaria) solid 2px;
 }
 
 .opcao-corte img {
@@ -543,12 +550,12 @@ footer {
   border-radius: 50px;
   text-decoration: none;
   border: #ffffff solid 1px;
-  color: #f5f5f5;
+  color: var(--cor-texto);
   transition: background-color 0.5s;
-  background-color: #d62828;
+  background-color: var(--cor-principal);
 }
 .opcoes-corte a:hover {
-  background-color: #2563eb;
+  background-color: var(--cor-secundaria);
 }
 .opcoes-corte button {
   margin-top: 10px;
@@ -557,12 +564,12 @@ footer {
   border-radius: 50px;
   text-decoration: none;
   border: #ffffff solid 1px;
-  color: #f5f5f5;
+  color: var(--cor-texto);
   transition: background-color 0.5s;
-  background-color: #d62828;
+  background-color: var(--cor-principal);
 }
 .opcoes-corte button:hover {
-  background-color: #2563eb;
+  background-color: var(--cor-secundaria);
 }
 
 .opcoes-barba a {
@@ -572,12 +579,12 @@ footer {
   border-radius: 50px;
   text-decoration: none;
   border: #ffffff solid 1px;
-  color: #f5f5f5;
+  color: var(--cor-texto);
   transition: background-color 0.5s;
-  background-color: #d62828;
+  background-color: var(--cor-principal);
 }
 .opcoes-barba a:hover {
-  background-color: #2563eb;
+  background-color: var(--cor-secundaria);
 }
 
 .opcoes-barba button {
@@ -587,12 +594,12 @@ footer {
   border-radius: 50px;
   text-decoration: none;
   border: #ffffff solid 1px;
-  color: #f5f5f5;
+  color: var(--cor-texto);
   transition: background-color 0.5s;
-  background-color: #d62828;
+  background-color: var(--cor-principal);
 }
 .opcoes-barba button:hover {
-  background-color: #2563eb;
+  background-color: var(--cor-secundaria);
 }
 /* responsividade */
 @media (max-width: 800px) {
@@ -602,14 +609,14 @@ footer {
     transition: background-color 0.5s;
   }
   .btMenu:hover {
-    background-color: #2563eb;
+    background-color: var(--cor-secundaria);
   }
   .navbar {
     display: none;
     position: absolute;
     top: 70px;
     right: 10px;
-    background-color: #181818;
+    background-color: var(--cor-fundo-claro);
     border-radius: 20px;
   }
   .cabecalho {
@@ -661,13 +668,13 @@ footer {
     .apresentabarbearia{
         width: 80%;
         height: auto;
-        border-bottom: #2563eb solid 5px;
+        border-bottom: var(--cor-secundaria) solid 5px;
         border-right: none;
     }
     .apresentabarbeiro{
         width: 80%;
         height: auto;
-        border-top: #d62828 solid 5px;
+        border-top: var(--cor-principal) solid 5px;
         border-left: none;
 
     }
