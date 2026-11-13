@@ -4,6 +4,7 @@
   --cor-fundo: #0d0d0d;
   --cor-fundo-claro:#181818;
   --cor-texto: #f5f5f5;
+  --cor-borda: #fff;
 }
 body {
   /* estilização do corpo do site */
@@ -29,11 +30,10 @@ body {
   display: none;
   background-color: var(--cor-principal);
   color: var(--cor-texto);
-  border: none;
   font-size: 30px;
   padding: 5px 10px;
   border-radius: 50px;
-  border: #ffffff solid 1px;
+  border: var(--cor-borda) solid 1px;
 }
 .logo {
   /* estilização do logo, utilizando classe pra isso */
@@ -41,13 +41,13 @@ body {
   margin: 0; /* remove a margem nativa */
   font-size: 40px; /* define o tamanho da fonte */
 }
-.cabecalho img {
+.cabecalho  img {
   /*  estilização da imagem do cabeçalho, utilizando a tag dento de um elemento com classe  */
   height: 70px; /* define a altura da imagem */
   width: 70px; /* define a largura da imagem */
   vertical-align: middle; /* alinha verticalmente em relação ao conteúdo do elemento pai */
 }
-.navbar a {
+.navbar  a {
   /*estilização dos links do menu de navegação, utilizando a tag dento de um elemento com classe  */
   padding: 10px 20px; /* define o espaçamento interno do link, 10px em cima e embaixo, 20px na esquerda e direita */
   font-size: 20px; /* define o tamanho da fonte */
@@ -95,7 +95,7 @@ body {
   font-size: 30px;
   border-radius: 50px;
   text-decoration: none;
-  border: #ffffff solid 2px;
+  border: var(--cor-borda) solid 2px;
   color: var(--cor-texto);
   transition: background-color 1s; /* define uma transição suave para a cor de fundo do botão, com duração de 1 segundo */
   background-color: var(--cor-principal);
@@ -104,8 +104,8 @@ body {
   /* define a cor de fundo do botão quando o mouse estiver sobre ele */
   background-color: var(--cor-secundaria);
 }
-.tituloservicos {
-  /* estilização dos títulos dos serviços, utilizando classe pra isso */
+.titulos {
+  /* estilização dos títulos , utilizando classe pra isso */
   text-align: center; /* alinha o texto ao centro */
   font-size: 40px;
   background-color: var(--cor-fundo-claro);
@@ -118,7 +118,7 @@ body {
   background-color: var(--cor-fundo-claro);
   padding: 20px;
 }
-.servicos div {
+.servicos  div {
   /* estilização dos containers dos serviços, utilizando a tag div dento de um elemento com classe  */
   border: var(--cor-principal) solid 2px;
   display: flex;
@@ -129,7 +129,7 @@ body {
   width: 300px;
   height: 300px;
   border-radius: 20px;
-  transition: border 1s;
+  transition: border-color 0.5s;
 }
 .servicos div h3 {
   /* estilização dos títulos dos serviços, utilizando a tag h3 dento de um elemento com classe  */
@@ -145,13 +145,6 @@ body {
   /* define a borda do container dos serviços quando o mouse estiver sobre ele */
   border: var(--cor-secundaria) solid 2px;
 }
-.titulogaleria {
-  /* estilização do título da galeria, utilizando classe pra isso */
-  text-align: center;
-  font-size: 40px;
-  background-color: var(--cor-fundo-claro);
-  margin: 30px 0 0 0;
-}
 .containerGaleria {
   /* estilização do container da galeria, utilizando classe pra isso */
   display: flex;
@@ -164,13 +157,6 @@ body {
   /* estilização das imagens da galeria, utilizando a tag img dento de um elemento com classe  */
   width: 400px;
   height: 400px;
-}
-.tituloapresentacao {
-  /* estilização do título da apresentação, utilizando classe pra isso */
-  text-align: center;
-  font-size: 40px;
-  background-color: var(--cor-fundo-claro);
-  margin: 30px 0 0 0;
 }
 .apresentacao {
   /* estilização do container da apresentação, utilizando classe pra isso */
@@ -284,7 +270,7 @@ footer {
 }
 
 /* Texto que fica abaixo do título */
-.pagina-agendamento > p {
+.pagina-agendamento  p {
   text-align: center;
   margin-bottom: 50px;
 
@@ -326,7 +312,7 @@ footer {
 
   box-sizing: border-box;
 
-  border: 1px solid #ccc;
+  border: 1px solid var(--cor-borda);
   border-radius: 7px;
 
   font-size: 17px;
@@ -519,7 +505,7 @@ footer {
   justify-content: flex-start;
   align-items: center;
   overflow: hidden;
-  transition: border 1s;
+  transition: border-color 0.3s;
 }
 
 .opcao-corte:hover {
@@ -543,62 +529,27 @@ footer {
   text-align: center;
 }
 
-.opcoes-corte a {
+
+
+.opcoes-corte a ,
+ .opcoes-barba a , 
+ .opcoes-corte button ,
+ .opcoes-barba button{
   margin-top: 10px;
   padding: 10px 20px;
   font-size: 20px;
   border-radius: 50px;
   text-decoration: none;
-  border: #ffffff solid 1px;
+  border: var(--cor-borda) solid 1px;
   color: var(--cor-texto);
   transition: background-color 0.5s;
   background-color: var(--cor-principal);
-}
-.opcoes-corte a:hover {
-  background-color: var(--cor-secundaria);
-}
-.opcoes-corte button {
-  margin-top: 10px;
-  padding: 10px 20px;
-  font-size: 20px;
-  border-radius: 50px;
-  text-decoration: none;
-  border: #ffffff solid 1px;
-  color: var(--cor-texto);
-  transition: background-color 0.5s;
-  background-color: var(--cor-principal);
-}
-.opcoes-corte button:hover {
-  background-color: var(--cor-secundaria);
 }
 
-.opcoes-barba a {
-  margin-top: 10px;
-  padding: 10px 20px;
-  font-size: 20px;
-  border-radius: 50px;
-  text-decoration: none;
-  border: #ffffff solid 1px;
-  color: var(--cor-texto);
-  transition: background-color 0.5s;
-  background-color: var(--cor-principal);
-}
-.opcoes-barba a:hover {
-  background-color: var(--cor-secundaria);
-}
-
-.opcoes-barba button {
-  margin-top: 10px;
-  padding: 10px 20px;
-  font-size: 20px;
-  border-radius: 50px;
-  text-decoration: none;
-  border: #ffffff solid 1px;
-  color: var(--cor-texto);
-  transition: background-color 0.5s;
-  background-color: var(--cor-principal);
-}
-.opcoes-barba button:hover {
+.opcoes-corte a:hover, 
+.opcoes-barba a:hover , 
+.opcoes-corte button:hover , 
+.opcoes-barba button:hover{
   background-color: var(--cor-secundaria);
 }
 /* responsividade */
