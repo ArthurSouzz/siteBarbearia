@@ -71,13 +71,13 @@
         <p>Preencha os dados abaixo para realizar seu agendamento.</p>
         <!-- Explicação para o cliente -->
 
-        <form class="formulario-agendamento">
+        <form class="formulario-agendamento" id ="formAgendamento">
           <!--
             Aqui começa o formulário.
             É onde o cliente vai colocar
             as informações do agendamento.
           -->
-
+          
           <div class="campo">
             <!-- Campo para o nome -->
 
@@ -91,13 +91,13 @@
               placeholder="Digite seu nome completo"
               required
             />
+            <span class="erro" id="erroNome"></span>
             <!--
               Campo para digitar o nome.
 
               type="text" = campo de texto
               id = identifica o campo
               placeholder = mostra uma dica
-              required = obriga o preenchimento
             -->
           </div>
 
@@ -113,7 +113,23 @@
               placeholder="(00) 00000-0000"
               required
             />
+            <span class="erro" id="erroTelefone"></span>
             <!-- Campo onde o cliente coloca o telefone -->
+          </div>
+          <div class="campo">
+            <!-- Campo para o email -->
+
+            <label for="email">Email</label>
+
+            <input
+              type="email"
+              id="email"
+              name="email"
+              placeholder="seuEmail@exemplo.com"
+              required
+            />
+            <span class="erro" id="erroEmail"></span>
+            <!-- Campo onde o cliente coloca o email -->
           </div>
 
           <div class="campo">
@@ -121,7 +137,7 @@
 
             <label for="servico">Escolha o serviço</label>
 
-            <select id="servico" name="servico" required>
+            <select id="servico" name="servico" >
               <!-- Lista com os serviços disponíveis -->
 
               <option value="">Selecione um serviço</option>
@@ -141,7 +157,7 @@
 
             <label for="barbeiro">Escolha o barbeiro</label>
 
-            <select id="barbeiro" name="barbeiro" required>
+            <select id="barbeiro" name="barbeiro" >
               <!-- Lista com os barbeiros -->
 
               <option value="">Selecione o barbeiro</option>
@@ -161,7 +177,7 @@
 
               <label for="data">Data</label>
 
-              <input type="date" id="data" name="data" required />
+              <input type="date" id="data" name="data"  />
               <!-- Aqui o cliente escolhe o dia -->
             </div>
 
@@ -170,7 +186,7 @@
 
               <label for="horario">Horário</label>
 
-              <input type="time" id="horario" name="horario" required />
+              <input type="time" id="horario" name="horario"  />
               <!-- Aqui o cliente escolhe o horário -->
             </div>
           </div>
@@ -192,13 +208,14 @@
             -->
           </div>
 
-          <button type="submit" class="btn-confirmar">
+          <button type="submit" class="btn-confirmar" >
             Confirmar Agendamento
           </button>
           <!--
             Botão usado para enviar o formulário.
           -->
-
+          <div id="mensagemSucesso" class="mensagem-sucesso"></div>
+          
           <a href="index.html" class="btn-voltar">
             Voltar para a página inicial
           </a>
@@ -206,10 +223,12 @@
             Esse botão leva o usuário de volta
             para o index.html.
           -->
+            
         </form>
         <!-- Fim do formulário -->
       </section>
       <!-- Fim da seção de agendamento -->
+        
     </main>
     <!-- Fim do conteúdo principal -->
 
@@ -249,6 +268,7 @@
           <p>&copy; 2025 Barbearia do Fulano. Todos os direitos reservados.</p>
         </div>
       </section>
+      
     </footer>
     <!-- Fim do rodapé -->
      <script src="script.js"></script>
