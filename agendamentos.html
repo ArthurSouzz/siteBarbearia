@@ -37,7 +37,6 @@
           <!-- Nome da barbearia -->
         </h1>
         <button class="btMenu" onclick="abrirMenu()">☰</button>
-        
 
         <nav class="navbar">
           <!-- Aqui começa o menu de navegação -->
@@ -71,13 +70,13 @@
         <p>Preencha os dados abaixo para realizar seu agendamento.</p>
         <!-- Explicação para o cliente -->
 
-        <form class="formulario-agendamento" id ="formAgendamento">
+        <form class="formulario-agendamento" id="formAgendamento">
           <!--
             Aqui começa o formulário.
             É onde o cliente vai colocar
             as informações do agendamento.
           -->
-          
+
           <div class="campo">
             <!-- Campo para o nome -->
 
@@ -137,10 +136,8 @@
 
             <label for="servico">Escolha o serviço</label>
 
-            <select id="servico" name="servico" >
+            <select id="servico" name="servico">
               <!-- Lista com os serviços disponíveis -->
-
-              <option value="">Selecione um serviço</option>
 
               <option value="corte">Corte de Cabelo</option>
 
@@ -157,37 +154,59 @@
 
             <label for="barbeiro">Escolha o barbeiro</label>
 
-            <select id="barbeiro" name="barbeiro" >
+            <select id="barbeiro" name="barbeiro">
               <!-- Lista com os barbeiros -->
-
-              <option value="">Selecione o barbeiro</option>
 
               <option value="gabriel">Gabriel Almeida</option>
             </select>
           </div>
 
-          <div class="linha">
-            <!--
-              Coloquei a data e o horário juntos
-              para ficarem lado a lado.
-            -->
-
+          <div class="campos-agendamento">
+            <!-- CAMPO DATA -->
             <div class="campo">
-              <!-- Campo para escolher a data -->
+              <label>Data</label>
 
-              <label for="data">Data</label>
+              <div class="seletor-data">
+                <button type="button" id="botaoData" class="campo-input">
+                  <span id="textoData">Selecione uma data</span>
+                </button>
 
-              <input type="date" id="data" name="data"  />
-              <!-- Aqui o cliente escolhe o dia -->
+                <!-- CALENDÁRIO -->
+                <div id="calendario" class="calendario" hidden>
+                  <div class="calendario-topo">
+                    <button type="button" id="mesAnterior">❮</button>
+
+                    <strong id="mesAno"></strong>
+
+                    <button type="button" id="proximoMes">❯</button>
+                  </div>
+
+                  <div class="dias-semana">
+                    <span>Dom</span>
+                    <span>Seg</span>
+                    <span>Ter</span>
+                    <span>Qua</span>
+                    <span>Qui</span>
+                    <span>Sex</span>
+                    <span>Sáb</span>
+                  </div>
+
+                  <div id="diasCalendario" class="dias-calendario"></div>
+                </div>
+              </div>
+
+              <input type="hidden" id="dataSelecionada" name="data" />
             </div>
 
+            <!-- CAMPO HORÁRIO -->
             <div class="campo">
-              <!-- Campo para escolher o horário -->
+              <label>Horário</label>
 
-              <label for="horario">Horário</label>
+              <div id="listaHorarios" class="lista-horarios">
+                <p>Selecione uma data primeiro</p>
+              </div>
 
-              <input type="time" id="horario" name="horario"  />
-              <!-- Aqui o cliente escolhe o horário -->
+              <input type="hidden" id="horarioSelecionado" name="horario" />
             </div>
           </div>
 
@@ -208,14 +227,14 @@
             -->
           </div>
 
-          <button type="submit" class="btn-confirmar" >
+          <button type="submit" class="btn-confirmar">
             Confirmar Agendamento
           </button>
           <!--
             Botão usado para enviar o formulário.
           -->
           <div id="mensagemSucesso" class="mensagem-sucesso"></div>
-          
+
           <a href="index.html" class="btn-voltar">
             Voltar para a página inicial
           </a>
@@ -223,12 +242,10 @@
             Esse botão leva o usuário de volta
             para o index.html.
           -->
-            
         </form>
         <!-- Fim do formulário -->
       </section>
       <!-- Fim da seção de agendamento -->
-        
     </main>
     <!-- Fim do conteúdo principal -->
 
@@ -268,10 +285,9 @@
           <p>&copy; 2025 Barbearia do Fulano. Todos os direitos reservados.</p>
         </div>
       </section>
-      
     </footer>
     <!-- Fim do rodapé -->
-     <script src="script.js"></script>
+    <script src="script.js"></script>
   </body>
 </html>
 <!-- Fim da página -->
